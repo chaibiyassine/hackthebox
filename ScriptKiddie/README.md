@@ -93,7 +93,7 @@ get access to the shell
 msf6>/bin/bash
 ```
 now we are logged in with root user.
-The system falg is located at root.txt file
+The system falg is located in root.txt file
 
 
 
