@@ -48,8 +48,8 @@ Open the following link in the browser : http://10.10.10.226:5000
 ![alt text](https://miro.medium.com/max/1050/1*kHKLfZcara8e5gh-YGbe1Q.png)
 
 A very simple page with 3 sections, Nmap scan, msfvenom and searchSploit.
-We can try command injection adn file Upload vulnerabilty.
-After some research we found that is APK template command injection Vulnerabilty : CVE-2020-7384
+We can try command injection and file Upload vulnerability.
+After some research we found that is APK template command injection vulnerability : CVE-2020-7384
 
 ## Metasploit
 Let's create a payload with metasploit framework using the exploit/unix/fileformat/metasploit_msfvenom_apk_template_cmd_injection module.
