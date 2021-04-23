@@ -47,25 +47,25 @@ Open the following link in the browser : http://10.10.10.226:5000
 
 ![alt text](https://miro.medium.com/max/1050/1*kHKLfZcara8e5gh-YGbe1Q.png)
 
-A very simple page with 3 sections, Nmap scan, msfvenom and searchSploit
-we can try command injection adn file Upload vulnerabilty
-after some research we found that is APK template command injection Vulnerabilty
+A very simple page with 3 sections, Nmap scan, msfvenom and searchSploit.
+We can try command injection adn file Upload vulnerabilty.
+After some research we found that is APK template command injection Vulnerabilty : CVE-2020-7384
 
 ## Metasploit
-Let's create a payload with metasploit framework using the exploit/unix/fileformat/metasploit_msfvenom_apk_template_cmd_injection module
-the generated payload is with .apk extension
-first, start a netcat listener on the port 5555
+Let's create a payload with metasploit framework using the exploit/unix/fileformat/metasploit_msfvenom_apk_template_cmd_injection module.
+The generated payload is with .apk extension.
+First, start a netcat listener on the port 5555
 ```
 nc -nlvp 5555
 ```
-now we can upload the payload with the Android platform and our ip address
-in out machine, we see that the reverse connection has been established
-user flag is in users.txt flag
+Now we can upload the payload with the Android platform and our ip address.
+In our machine, we can see that the reverse connection has been established.
+User flag is in users.txt flag
 
 ## Privilege Escalation
-in the logs directory, we can see that the file named hackers is owned by the group pwn, so we can execute commands with this group
-now let's establish a reverse shell using this file
-fisrt, start another netcat listener on the port 1234
+In the logs directory, we can see that the file named hackers is owned by the group pwn, so we can execute commands with this group.
+Now let's establish a reverse shell using this file.
+Fisrt, start another netcat listener on the port 1234
 ```
 nc -nlvp 1234
 ```
@@ -92,8 +92,8 @@ get access to the shell
 ```
 msf6>/bin/bash
 ```
-now we are logged in with root user
-the system falg is located at root.txt file
+now we are logged in with root user.
+The system falg is located at root.txt file
 
 
 
