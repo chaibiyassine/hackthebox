@@ -42,5 +42,19 @@ HOP RTT       ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 59.62 seconds
 ```
+nmap scan show that there is three ports open, 22 for ssh, 80 for http and 3306 for mysql.
+let's open the following link in the browser : http://10.10.10.229
 
+![alt text](https://pencer.io/assets/images/2021-03-21-16-46-59.png)
+
+a simple page with two links, Software Issue Tracking and test.
+The test link redirect us to http://10.10.10.229/testing/index.php, in this page we see an error database connection.
+When we open http://10.10.10.229/testing, we see a wordpress projet, it's like a testing wordpress projet.
+There is a file called wp-config.php.save, it's a configuration file in wordpress.
+There is some credentials in this file, like ```define( 'DB_PASSWORD', '<<HIDDEN>>' );```
+
+
+
+mysql --host=spectra.htb --user=devtest --password=devteam01 dev
+SummerHereWeCome!!
 
