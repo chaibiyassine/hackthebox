@@ -1,4 +1,4 @@
-# Spectra
+# Spectra Writeup
 ## Initial Recon
 Let's start with a nmap scan to extract the open ports
 
