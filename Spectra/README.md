@@ -44,7 +44,10 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 59.62 seconds
 ```
 nmap scan show that there is three ports open, 22 for ssh, 80 for http and 3306 for mysql.
-let's open the following link in the browser : http://10.10.10.229
+
+## Website Enumeration
+
+Open the following link in the browser : http://10.10.10.229
 
 ![alt text](https://pencer.io/assets/images/2021-03-21-16-46-59.png)
 
