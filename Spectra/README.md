@@ -1,5 +1,6 @@
 # Spectra
-## Nmap Scan
+## Initial Recon
+Let's start with a nmap scan to extract the open ports
 
 ```
 Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-24 08:23 EDT
@@ -56,6 +57,7 @@ Let's use this password to login in the the admin page of main website with user
 
 ET VOILA
 
+## Metasploit 
 
 
 
