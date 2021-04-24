@@ -51,7 +51,11 @@ a simple page with two links, Software Issue Tracking and test.
 The test link redirect us to http://10.10.10.229/testing/index.php, in this page we see an error database connection.
 When we open http://10.10.10.229/testing, we see a wordpress projet, it's like a testing wordpress projet.
 There is a file called wp-config.php.save, it's a configuration file in wordpress.
-There is some credentials in this file, like ```define( 'DB_PASSWORD', '<<HIDDEN>>' );```
+There is some credentials in this file, like ```define( 'DB_PASSWORD', 'devteam01' );```
+Let's use this password to login in the the admin page of main website with username ```administrator```
+
+ET VOILA
+
 
 
 
