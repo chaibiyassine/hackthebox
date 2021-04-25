@@ -1,6 +1,6 @@
 # ScriptKiddie
 
-## Nmap Scan
+## Initial Recon
 Let's start with a nmap scan to extract the open ports
 ```
 Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-22 09:38 EDT
@@ -42,6 +42,8 @@ Nmap done: 1 IP address (1 host up) scanned in 42.09 seconds
 ```
 
 We can see that the ports 5000 and 22 are open, 5000 for http and 22 for ssh
+
+## Website Enumeration
 
 Open the following link in the browser : http://10.10.10.226:5000
 
